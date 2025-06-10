@@ -76,6 +76,18 @@ export function WordFrequencyCounter() {
 
     // Convert to array and sort by frequency
     const totalWords = words.length;
+    if (totalWords === 0) {
+      setFrequencies([]);
+      setStats({
+        totalWords: 0,
+        uniqueWords: 0,
+        totalCharacters: text.length,
+        averageWordLength: 0
+      });
+      toast.error('No valid words found with the given options');
+      return;
+    }
+
     const frequencies: WordFrequency[] = Array.from(wordCounts.entries())
       .map(([word, count]) => ({
         word,
