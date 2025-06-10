@@ -71,7 +71,6 @@ export function JsMinifier() {
       } else {
         // Simple JavaScript beautification
         let indentLevel = 0;
-        const lines = result.split(/[;{}]/);
         
         result = input
           .replace(/\s*{\s*/g, ' {\n')
