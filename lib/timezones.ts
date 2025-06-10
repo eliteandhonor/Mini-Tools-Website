@@ -1,5 +1,5 @@
 // Auto-generated timezone data from IANA timezone database
-// Total timezones: 417
+// Total timezones: approximately 431
 
 export interface TimezoneInfo {
   value: string;
